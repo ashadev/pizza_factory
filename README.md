@@ -18,9 +18,8 @@ Pizza Factory
           - POST -> /orders/:id/cancel -> Cancel an order
           - POST -> /inventory/restock -> Restock inventory
 
-     curl -X POST "http://localhost:3000/inventory_restock/restock" \
-          -H "Content-Type: application/json" \
-          -d '{ "item_type": "topping", "item_id": 3, "quantity": 50, "user_id": 2 }'
+     curl -X POST "http://127.0.0.1:3000/inventory_restock/restock" -H "Content-Type: application/json" -d "     
+       {\"item_type\":\"topping\",\"item_id\":3,\"quantity\":50,\"user_id\":2}"
 
 
      curl -X POST "http://localhost:3000/orders" -H "Content-Type: application/json" -d "{ \"order\": { \"user_id\": 2, \"side_ids\": [1, 2], \"pizzas\": [ { \"pizza_id\": 3, \"size\": \"large\", \"crust_id\": 1, \"topping_ids\": [4, 5] }, { \"pizza_id\": 1, \"size\": \"medium\", \"crust_id\": 2, \"topping_ids\": [3] } ] } }"
